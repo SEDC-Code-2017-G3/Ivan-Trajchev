@@ -1,0 +1,78 @@
+.white{
+    background-color: #eff2eb;
+}
+
+
+.square-1{
+    left: 0px;
+    width: 315px;
+    height: 273px;
+}
+.square-2{
+    right: 0px;
+    width: 375px;
+    height: 273px;
+    margin-left: 10px;
+}
+
+.square-3{
+    top: 283px;
+    width: 315px;
+    height: 153px;
+}
+
+.square-4{
+    top: 283px;
+    right: 0px;
+    width: 375px;
+    height: 153px;
+}
+
+.square-5{
+    bottom: 0px;
+    width: 50.5px;
+    height: 254px;
+}
+
+.square-6{
+    bottom: 0;
+    left: 60.5px;
+    width: 254px;
+    height: 254px;
+}
+
+.square-7{
+    bottom: 54px;
+    left: 324.5px;
+    width: 210px;
+    height: 200px;
+
+}
+
+.square-8{
+    bottom: 0px;
+    left: 324.5px;
+    width: 210px;
+    height: 44px;
+    
+}
+
+.square-9{
+    right: 0px;
+    bottom: 0px;
+    width: 155.5px;
+    height: 254px;
+}
+
+
+.red{
+    background-color: #e84f2b;
+}
+
+.blue{
+    background-color: #2b539a;
+}
+            
+.yellow{
+    background-color: #ebd274;
+}

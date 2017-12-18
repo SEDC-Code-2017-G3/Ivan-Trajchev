@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pig game</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100 400" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main class="main flex-center">
+        <div class="main__container flex-center">
+            <section class="main__section flex-center" id="main-left">
+                <div class="main__section__container flex-center">
+                    <div class="main__section__player" id="player-one">
+
+                        <h2 class="main__section__player__h2">
+                            Player One
+                        </h2>
+                        <div class="star">
+                            <i class="ion-ios-star"></i>
+                        </div>
+
+                            <h2 class="main__section__player__score" id="player-one__total">
+                                X
+                            </h2>
+                    </div>
+
+                    <div class="main__section__player__current-score">
+                        <p>Current</p>
+                        <h3 id="player-one__current">
+                            X
+                        </h3>
+                    </div>
+                </div>
+            </section>
+            <section class="main__section flex-center" id="main-right">
+                <div class="main__section__container flex-center">
+                    <div class="main__section__player" id="player-two">
+
+                        <h2 class="main__section__player__h2">
+                            Player Two
+                        </h2>
+                        <div class="star">
+                                <i class="ion-ios-star"></i>
+                            </div>    
+
+                            <h2 class="main__section__player__score" id="player-two__total">
+                                X
+                            </h2>
+                    </div>
+
+                    <div class="main__section__player__current-score">
+                        <p>Current</p>
+                        <h3 id="player-two__current">
+                            X
+                        </h3>
+                    </div>
+                </div>
+            </section>
+            <section class="main__middle flex-center">
+                <button class="button new-game" id="new-game">
+                        <i class="ion-ios-plus-outline"> 
+                        </i>
+                        New Game
+                </button>
+                <div class="dice">
+                    <img src="img/dice-2.png" alt="dice" id="dice">
+                </div>
+                <button class="button roll" id="roll">
+                    <i class="ion-ios-loop"></i>
+                    Roll Dice
+                </button>
+                <button class="button hold" id="hold">
+                    <i class="ion-ios-download-outline"></i>
+                    hold
+                </button>
+            </section>
+        </div>
+    </main>
+    <script src="script/script.js"></script>
+</body>
+
+</html>

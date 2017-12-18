@@ -1,0 +1,72 @@
+.white{
+    background-color: #eff2eb;
+}
+
+.square-1{
+    left: 0;
+    height: 200px;
+    width: 200px;
+}
+.square-2{
+    right: 0;
+    width: 480px;
+    height: 200px;
+}
+
+.square-3{
+    top: 220px;
+    height: 480px;
+    width: 200px;
+}
+
+.square-4{
+    left: 220px;
+    top: 220px;
+    width: 430px;
+    height: 440px;
+}
+
+.square-5{
+    right: 0px;
+    top: 220px;
+    width: 30px;
+    height: 200px;
+}
+
+.square-6{
+    left: 220px;
+    bottom: 0px;
+    width: 220px;
+    height: 20px;
+}
+
+.square-7{
+    right: 0px;
+    bottom: 0px;
+    width: 30px;
+    height: 260px;
+}
+
+.square-8{
+    bottom: 0px;
+    height: 0px;
+    
+}
+
+.square-9{
+    bottom: 0px;
+    height: 0px;
+}
+
+
+.red{
+    background-color: #e84f2b;
+}
+
+.blue{
+    background-color: #2b539a;
+}
+            
+.yellow{
+    background-color: #ebd274;
+}

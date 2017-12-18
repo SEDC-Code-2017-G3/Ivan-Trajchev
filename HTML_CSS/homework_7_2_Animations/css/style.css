@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 500;
+    text-transform: lowercase;
+}
+
+/* START GLOBAL CLASSES */
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* END GLOBAL CLASSES */
+
+
+/* START SECTIONS STYLE */
+.page-wrap {
+    width: 100vw; height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+    width: 87vw; height: 290px;
+    max-width: 900px;
+    color: #fff;
+    border: 4px solid #333;
+}
+
+.main__top-left,
+.main__top-right,
+.main__bot-left,
+.main__bot-right {
+    width: 460px; height: 145px;
+    background-color: #e74a3d;
+}
+
+.main__top-left,
+.main__bot-right {
+    background-color: #de4739;
+}
+/* END SECTIONS STYLE */
+
+/* TOP ROW LOADING BARS */
+ .load-wrap {
+    position: relative;
+    width: 120px; height: 16px;
+}
+
+ .load-wrap * {
+    height: 100%; width: 100%;
+    position: absolute;
+    text-align: center;
+    background-color: #e74a3d;
+}
+
+.text-container{
+    margin: 3px 0 3px 0;
+    font-size: 0.7em;
+    line-height: 1.6em;
+}
+
+.main__top-right .text-container{
+    background-color: #ea7a6c;
+}
+
+/* TOP LEFT LOADING BAR */
+.main__top-left .load-bar {
+     padding: 3px 0 3px 0;
+}
+
+/* TOP RIGHT LOADING BAR */
+.main__top-right .load-bar {
+    margin: 3px 0 3px 0;
+    z-index: 1;
+}
+
+/* load-bar CLASS IS USED FOR ALL THREE LOADING BAR ANIMATIONS
+WITH MINOR CHANGES TO EACH */
+.load-bar{
+    position: absolute;
+    height: 100%;
+    background-color: #fff;
+    animation: load-top 4s infinite ease-out;
+}
+
+
+/* BOTTOM LEFT ANIMATION */
+.dia{
+    width: 50px;
+    justify-content: space-between;
+    color: #fff;
+    animation: bot-left 1s infinite linear;
+}
+
+.dia p:last-child,
+.dia p:first-child 
+{
+    color: #f5aea6;
+}
+
+/* BOTTOM RIGHT ANIMATION */
+
+.out-box{
+    width: 50px; height: 50px;
+    position: relative;
+}
+
+.out-box p{
+    position: absolute;
+    width: 7px; height: 7px; 
+    border-radius: 50%;
+    background-color: #fff;
+    left: 0;
+    animation: bot-right 1s infinite linear;
+}
+
+.in-box { position: absolute }
+
+.load-back{   
+    width: 30px; height: 30px;
+    background-color: #ea7a6c;
+}
+/* START KEYFRAMES */
+@keyframes load-top {
+    0% {width: 0%; opacity: 1}
+    70%{width: 100%; opacity: 1}
+    100% {width: 100%; opacity: 0}
+}
+
+@keyframes bot-left{
+    0%{transform: rotate(0deg)}
+    50%{transform: rotate(180deg)}
+    100%{transform: rotate(180deg)}
+}
+
+@keyframes bot-right{
+    0%{left: 0px; top: 0px}
+    25%{left: 43px; top: 0px;}
+    50%{left: 43px; top: 43px;}
+    75%{left: 0px; top: 43px}
+    100%{left: 0px; top: 0px}
+}
+/* END KEYFRAMES */

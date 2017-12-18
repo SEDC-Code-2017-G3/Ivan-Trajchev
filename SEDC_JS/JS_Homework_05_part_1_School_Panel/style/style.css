@@ -1,0 +1,16 @@
+﻿body
+{
+    font-family: sans-serif;
+}
+
+#header{
+    padding-left: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#menu{
+    list-style: none;
+    background-color: antiquewhite;
+    font-weight: 600;
+}
