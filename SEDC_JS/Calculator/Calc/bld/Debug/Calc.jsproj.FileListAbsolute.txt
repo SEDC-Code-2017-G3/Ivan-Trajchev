@@ -1,0 +1,17 @@
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\ReverseMap\resources.pri
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\AppxManifest.xml
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\Calc.build.appxrecipe
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\Calc.jsproj.CoreCompileInputs.cache
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\ResourceHandlingTask.state
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\priconfig.xml
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\priconfig.xml.intermediate
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\layout.resfiles
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\layout.resfiles.intermediate
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\resources.resfiles
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\resources.resfiles.intermediate
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\pri.resfiles
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\pri.resfiles.intermediate
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\qualifiers.txt
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\ProjectArchitectures.txt

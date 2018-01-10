@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>DESKTOP-K81N61B</Machine>
+    <WindowsUser>Ivan</WindowsUser>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>db0ce473-1696-423b-bcd5-654aab726198</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Ivan</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bld\Debug\</IntermediateOutputPath>
+    <RemoteDeploymentType>
+    </RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>
+    </WindowsSdkPath>
+    <LayoutDir>C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\AppX</LayoutDir>
+    <RegisteredManifestChecksum>FE7987AFC6AB3CC9C3D244858FCEACC7BB1F096FD1C8364CA13E0180EA864622</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>db0ce473-1696-423b-bcd5-654aab726198_1.0.0.0_neutral__gk938hsxq58a8</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>db0ce473-1696-423b-bcd5-654aab726198_gk938hsxq58a8!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>db0ce473-1696-423b-bcd5-654aab726198</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ivan</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-28T09:15:38.963</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\index.html">
+      <PackagePath>index.html</PackagePath>
+      <Modified>2018-01-08T22:12:32.477</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\LockScreenLogo.scale-200.png">
+      <PackagePath>images\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\SplashScreen.scale-200.png">
+      <PackagePath>images\SplashScreen.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\Square150x150Logo.scale-200.png">
+      <PackagePath>images\Square150x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\Square44x44Logo.scale-200.png">
+      <PackagePath>images\Square44x44Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>images\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\StoreLogo.png">
+      <PackagePath>images\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\images\Wide310x150Logo.scale-200.png">
+      <PackagePath>images\Wide310x150Logo.scale-200.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-07T11:00:40.220</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\js\main.js">
+      <PackagePath>js\main.js</PackagePath>
+      <Modified>2018-01-09T04:17:27.631</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\css\default.css">
+      <PackagePath>css\default.css</PackagePath>
+      <Modified>2018-01-09T04:20:13.155</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ivan\source\repos\SEDC\Projects\Calc\Calc\bin\Debug\ReverseMap\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2017-12-28T09:15:38.666</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

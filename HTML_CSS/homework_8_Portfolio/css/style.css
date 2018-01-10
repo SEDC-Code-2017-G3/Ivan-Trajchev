@@ -1,0 +1,18 @@
+﻿*{
+    text-align: center;
+}
+
+.navbar-brand > img{
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.header{
+    height: 100vh; 
+    width: 100%;
+    background: url(../assets/img/space1.jpg) no-repeat top;
+}
+.header__section{
+
+}
