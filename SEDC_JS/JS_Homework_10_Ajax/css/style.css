@@ -1,0 +1,8 @@
+.wiki {
+    height: calc(100vh - 206px);
+    overflow-y: scroll;
+}
+
+.map{
+    height: calc(100vh - 50px);
+}
