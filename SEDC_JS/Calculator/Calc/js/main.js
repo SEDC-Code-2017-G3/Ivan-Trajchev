@@ -46,7 +46,7 @@ class Calculator {
         this.printMath = document.getElementById("display-math");
         this.printFinal = document.getElementById("display-final");
         this.btn = document.getElementById("buttons");
-        
+
         this.operation = {
             '+': (a, b) => a += b,
             '-': (a, b) => a -= b,
@@ -69,7 +69,8 @@ class Calculator {
                 //numA becomes the number before the operator and will be overwriten by the result
                 // e.g. if 3 + 2 ---> 3 becomes the result and 2 is added to the result.
                 //numB becomes the second number.
-                numA = op - 1; numB = op + 1;
+                numA = op - 1;
+                numB = op + 1;
 
                 //Here the method that corresponds to the op string(the use of strings as property names)
                 //in the this.operation object is called. the arguments are numA and numB.
@@ -97,8 +98,7 @@ let symbolLen = symbols.length;
 for (let i = 0; i < 10 + symbolLen; i++) {
     if (i < 10) {
         Calc.btn.innerHTML += `<button class="btn btn-dark" value="${i}">${i}</button>`;
-    }
-    else {
+    } else {
         // Switch to use r and s for square and square root as value 
         // but print the symbols on the buttons
         let symbol;
@@ -126,8 +126,17 @@ let equationStr = "";
 
 function inputHandler(evt) {
 
-    if (numberStr.length <= 10 && !isNaN(evt) || evt == "." && numberStr.indexOf('.') == -1) {
-        numberStr += evt;
+    if (equationStr < 11 && !isNaN(evt) || evt == "." && numberStr.indexOf('.') == -1) {
+
+        // if (/\./g.test(numberStr)) {
+            numberStr += evt;
+            numberStr = parseFloat(Math.round(numberStr * 100) / 100).toString();
+        //     numberStr.substring(0, 8);
+        // } else {
+        //     numberStr += evt;
+        //     numberStr.substring(0, 4);
+        // }
+        // numberStr.Math.round(arr[numA] * 10000) / 10000;
         Calc.printMath.innerHTML = equationStr + numberStr;
         isLastNum = true;
     }
@@ -162,8 +171,7 @@ function inputHandler(evt) {
         // Print equation and clear number input
         Calc.printMath.innerHTML = equationStr;
         numberStr = "";
-    }
-    else if ((evt == "=" || evt == "Enter") && isLastNum) {
+    } else if ((evt == "=" || evt == "Enter") && isLastNum) {
         //add last number to equationStr and convert to Array
         equationStr += numberStr;
         let equationArr = equationStr.split(" ");
@@ -172,8 +180,8 @@ function inputHandler(evt) {
         equationArr = equationArr.filter(Boolean);
         Calc.printMath.innerHTML += " = ";
         // perform calculations
-        Calc.calculationHandler(equationArr, "<sup>2</sup>", "&#8730;",);
-        Calc.calculationHandler(equationArr, "*", "/",);
+        Calc.calculationHandler(equationArr, "<sup>2</sup>", "&#8730;", );
+        Calc.calculationHandler(equationArr, "*", "/", );
         Calc.calculationHandler(equationArr, "+", "-");
         // Clear Memmory
         equationStr = numberStr = "";

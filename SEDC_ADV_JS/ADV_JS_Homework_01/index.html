@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add users</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Add users</h1>
+    <section class="section">
+        <div class="section__sub section--left">
+            <form class="form" id="form" action="">
+                <legend>
+                    <h4>User details</h4>
+                </legend>
+
+                <label class="label" for="firstName">First name</label>
+                <input type="text" name="firstName" id="firstName" maxlength="20" required>
+                <br>
+
+                <label class="label" for="lastName">Last name</label>
+                <input type="text" name="lastName" id="lastName" maxlength="20" required>
+                <br>
+
+                <label class="label">Gender</label>
+                <input type="radio" name="gender" id="male" value="m" required>
+                <label for="male">male</label>
+                <input type="radio" name="gender" id="female" value="f" required>
+                <label for="female">female</label>
+                <br>
+
+                <label class="label" for="birthDate">Birth date</label>
+                <input type="date" name="birthDate" id="birthDate" required>
+                <br>
+
+                <label class="label" for="city">City</label>
+                <input type="text" name="city" id="city" maxlength="20" required>
+                <br>
+
+                <label class="label" for="role">Role</label>
+                <input type="radio" name="role" class="role" id="student" value="student" required>
+                <label for="student">Student</label>
+                <input type="radio" name="role" class="role" id="teacher" value="teacher" required>
+                <label for="teacher">Teacher</label>
+                <br>
+
+                <div id="roleOptions"></div>
+                <br>
+
+                <button class="btn--add" type="submit">Add user</button>
+            </form>
+        </div>
+        <div class="section__sub section--right">
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th colspan="2">Index</th>
+                        <th>Student Name</th>
+                        <th>Department</th>
+                    </tr>
+                </thead>
+                <tbody  class="table__student">
+
+                </tbody>
+
+                <thead>
+                    <tr>
+                        <th colspan="2">Index</th>
+                        <th>Teacher Name</th>
+                        <th>Subject</th>
+                    </tr>
+                </thead>
+                <tbody class="table__teacher">
+
+                </tbody>
+            </table>
+            <button class="btn--delete" id="btn--delete">Delete User</button>
+        </div>
+    </section>
+    <script type="text/javascript" src="script/script.js"></script>
+</body>
+
+</html>
