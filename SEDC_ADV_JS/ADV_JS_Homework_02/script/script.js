@@ -14,6 +14,9 @@ function Bus(passengers, color) {
         } else isMoving = false;
         return `Are we moving?: ${isMoving}`;
     }
+    this.getIsMoving = function(){
+        return isMoving;
+    }
 
 }
 
@@ -78,32 +81,83 @@ PublicTransportBus.prototype.closeDoors = function(closeFront, closeBack){
     }
 }
 
+
+
+//Tour Bus Object
+function TourBus(from, to, company, color, passengers, airConditionig) {
+    Bus.call(this, passengers, color);
+    this.from = from || "Skopje";
+    this.to = to || "Gevgelija";
+    this.company = company || "Rule Tours";
+    this.seats = 40;
+    this.airConditioning = airConditionig || false;
+    if(this.airConditioning) this.airConOn = false;
+    //Again with the private property
+    let doorsOpen = false;
+    this.openDoors= function(open){
+        if(open && !doorsOpen){
+            return this.getIsMoving() ? "can't open dors while moving!" : doorsOpen = true;
+        }
+        else{
+            return doorsOpen = false;
+        }
+    }
+}
+
+TourBus.prototype = Object.create(Bus.prototype);
+Object.defineProperty(TourBus.prototype, "constructor", {
+    enumerable: false,
+    writable: true,
+    configurable: true,
+    value: PublicTransportBus
+});
+
+TourBus.prototype.toggleAirCon = function(){
+    if(this.airConditioning){
+        return this.airConOn ? this.airConOn = false : this.airConOn = true;
+    }
+    else{
+        return "there is no air conditioner in the bus"
+    }
+}
+
 //Lets test them
-var output = document.getElementById("output");
 //Public transport bus
+var headingP = document.getElementById("headingP").innerHTML = "Public transport example";
+var outputP = document.getElementById("outputP");
 var petka = new PublicTransportBus(5, 3, "red");
-output.innerText += `You are driving a ${petka.color} bus with line number ${petka.lineNumber}`;
-output.innerText += "\n" + `and capacity of ${petka.seats} passengers. now there are ${petka.passengers} pasengers on board`;
-output.innerText += "\n" + petka.getFreeSeats();
-output.innerText += "\n" + "the engine is off, press the gass pedal";
-output.innerText += "\n" + petka.gasPedal(true);
-output.innerText += "\n" + "now turn it on."
-output.innerText += "\n" + petka.toggleEngine();
-output.innerText += "\n" + "press the pedal again.";
-output.innerText += "\n" + petka.gasPedal(true);
-output.innerText += "\n" + "take your foot off the pedal while engine is working";
-output.innerText += "\n" + petka.gasPedal(false);
-output.innerText += "\n" + petka.getIsWorking();
-output.innerText += "\n" + "27 passengers get on board";
+outputP.innerText += `You are driving a ${petka.color} bus with line number ${petka.lineNumber}`;
+outputP.innerText += "\n" + `and capacity of ${petka.seats} passengers. now there are ${petka.passengers} pasengers on board`;
+outputP.innerText += "\n" + petka.getFreeSeats();
+outputP.innerText += "\n" + "the engine is off, press the gass pedal";
+outputP.innerText += "\n" + petka.gasPedal(true);
+outputP.innerText += "\n" + "now turn it on."
+outputP.innerText += "\n" + petka.toggleEngine();
+outputP.innerText += "\n" + "press the pedal again.";
+outputP.innerText += "\n" + petka.gasPedal(true);
+outputP.innerText += "\n" + "take your foot off the pedal while engine is working";
+outputP.innerText += "\n" + petka.gasPedal(false);
+outputP.innerText += "\n" + petka.getIsWorking();
+outputP.innerText += "\n" + "27 passengers get on board";
 petka.passengers += 27;
-output.innerText += "\n" + "are there any more free seats?";
-output.innerText += "\n" + petka.getFreeSeats();
-output.innerText += "\n" + "two more passengers try to get on board!";
+outputP.innerText += "\n" + "are there any more free seats?";
+outputP.innerText += "\n" + petka.getFreeSeats();
+outputP.innerText += "\n" + "two more passengers try to get on board!";
 petka.passengers += 2;
-output.innerText += "\n" + petka.getFreeSeats();
-output.innerText += "\n" + "Someone is yelling: Majstore Zadna! you open it.";
-output.innerText += "\n" + `is zadna open?: ${ petka.openDoors(false, true)}`;
-output.innerText += "\n" + "now you close it!";
-output.innerText += "\n" + `is zadna open?: ${petka.closeDoors(false, true)}`;
-output.innerText += "\n" + 'ok. time to go.. press the gas';
-output.innerText += "\n" + petka.gasPedal(true);
+outputP.innerText += "\n" + petka.getFreeSeats();
+outputP.innerText += "\n" + "Someone is yelling: Majstore Zadna! you open it.";
+outputP.innerText += "\n" + `is zadna open?: ${ petka.openDoors(false, true)}`;
+outputP.innerText += "\n" + "now you close it!";
+outputP.innerText += "\n" + `is zadna open?: ${petka.closeDoors(false, true)}`;
+outputP.innerText += "\n" + 'ok. time to go.. press the gas';
+outputP.innerText += "\n" + petka.gasPedal(true);
+
+// Tour Bus
+var headingT = document.getElementById("headingT").innerHTML = "Touring bus example";
+var outputT = document.getElementById("outputT");
+var tourBus = new TourBus("Skopje", "Ohrid", "Galeb", "White", 37, false)
+outputT.innerText += `You are driving a ${tourBus.color} bus from the company ${tourBus.company} from ${tourBus.from} to ${tourBus.to}`;
+outputT.innerText += "\n" + `there are ${tourBus.passengers} passengers and there ${tourBus.airConditioning ? "is" : "is no"} air conditioning.`;
+outputT.innerText += "\n" + "You turn on the bus";
+outputT.innerText += "\n" + tourBus.toggleEngine();
+outputT.innerText += "\n" + `and the trip is ${tourBus.airConditioning ? "fine" : "hell"}`
