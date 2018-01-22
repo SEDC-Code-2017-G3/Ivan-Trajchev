@@ -1,0 +1,21 @@
+*{
+    font-family: sans-serif;
+}
+
+h1{
+    background-color: #2980b9;
+    color: #fff;
+    padding: 5px;
+    margin: 0;
+}
+h1 + section{
+    background-color: #ecf0f1;
+    padding: 40px 10px;
+}
+.hidden{
+    visibility: hidden;
+}
+
+.alert{
+    color: darkred;
+}
