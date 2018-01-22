@@ -12,7 +12,7 @@ function Bus(passengers, color) {
         if (this.isWorking && press) {
             isMoving = true;
         } else isMoving = false;
-        console.log(`Are we moving?: ${isMoving}`);
+        return `Are we moving?: ${isMoving}`;
     }
 
 }
@@ -22,23 +22,20 @@ Bus.prototype.getFreeSeats = function () {
         let free = this.seats - this.passengers;
         let message = null;
         free !== 0 ? message = `there are ${free} free seats` : message = "bus is full!";
-        console.log(message);
-        return free;
+        return message;
     } else {
         let excess = this.passengers - this.seats;
-        console.log(`${excess} passengers can't get on the bus`);
-        return excess;
+        return `${excess} passengers can't get on the bus`;
     }
 }
 
 Bus.prototype.toggleEngine = function () {
     !this.isWorking ? this.isWorking = true : this.isWorking = false;
-    console.log(`the engine is working: ${this.isWorking}`);
+    return `the engine is working: ${this.isWorking}`;
 }
 
 Bus.prototype.getIsWorking = function () {
-    console.log(`is the engine working?: ${this.isWorking}`)
-    return this.isWorking
+    return `is the engine working?: ${this.isWorking}`;
 }
 
 //Public Transport Bus Object
@@ -61,43 +58,52 @@ Object.defineProperty(PublicTransportBus.prototype, "constructor", {
 });
 
 PublicTransportBus.prototype.openDoors = function(openFront, openBack){
-	if(!this.doorsOpen.front && openFront) this.doorsOpen.front = true;
-	if(!this.doorsOpen.back && openBack) this.doorsOpen.back = true;
+	if(!this.doorsOpen.front && openFront){
+        this.doorsOpen.front = true;
+        return this.doorsOpen.front;
+    }
+    if(!this.doorsOpen.back && openBack){
+        this.doorsOpen.back = true;
+        return this.doorsOpen.back;
+    }
 }
 PublicTransportBus.prototype.closeDoors = function(closeFront, closeBack){
-	if(this.doorsOpen.front && closeFront) this.doorsOpen.front = false;
-	if(this.doorsOpen.back && closeBack) this.doorsOpen.back = false;
+    if(this.doorsOpen.front && closeFront){
+        this.doorsOpen.front = false;
+        return this.doorsOpen.front;
+    }
+    if(this.doorsOpen.back && closeBack){
+        this.doorsOpen.back = false;
+        return this.doorsOpen.back;
+    }
 }
 
 //Lets test them
-
+var output = document.getElementById("output");
 //Public transport bus
 var petka = new PublicTransportBus(5, 3, "red");
-console.log(`You are driving a ${petka.color} bus with line nummber ${petka.lineNumber}`);
-console.log(`and capacity of ${petka.seats} passengers. now there are ${petka.passengers} pasengers on board`);
-petka.getFreeSeats();
-console.log('\n')
-console.log("the engine is off, press the gass pedal");
-petka.gasPedal(true);
-console.log("now turn it on.")
-petka.toggleEngine();
-console.log("press the pedal again.")
-petka.gasPedal(true);
-console.log("take your foot off the pedal while engine is working");
-petka.gasPedal(false);
-petka.getIsWorking();
-console.log("27 passengers get on board");
+output.innerText += `You are driving a ${petka.color} bus with line number ${petka.lineNumber}`;
+output.innerText += "\n" + `and capacity of ${petka.seats} passengers. now there are ${petka.passengers} pasengers on board`;
+output.innerText += "\n" + petka.getFreeSeats();
+output.innerText += "\n" + "the engine is off, press the gass pedal";
+output.innerText += "\n" + petka.gasPedal(true);
+output.innerText += "\n" + "now turn it on."
+output.innerText += "\n" + petka.toggleEngine();
+output.innerText += "\n" + "press the pedal again.";
+output.innerText += "\n" + petka.gasPedal(true);
+output.innerText += "\n" + "take your foot off the pedal while engine is working";
+output.innerText += "\n" + petka.gasPedal(false);
+output.innerText += "\n" + petka.getIsWorking();
+output.innerText += "\n" + "27 passengers get on board";
 petka.passengers += 27;
-console.log("are there any more free seats?")
-petka.getFreeSeats();
-console.log("two more passengers try to get on board!");
+output.innerText += "\n" + "are there any more free seats?";
+output.innerText += "\n" + petka.getFreeSeats();
+output.innerText += "\n" + "two more passengers try to get on board!";
 petka.passengers += 2;
-petka.getFreeSeats();
-console.log("Someone is yelling: Majstore Zadna! you open it.");
-petka.openDoors(false, true);
-console.log(`is zadna open?: ${petka.doorsOpen.back}`);
-console.log("now you close it!");
-petka.closeDoors(false, true);
-console.log(`is zadna open?: ${petka.doorsOpen.back}`);
-console.log('ok. time to go.. press the gas');
-petka.gasPedal(true);
+output.innerText += "\n" + petka.getFreeSeats();
+output.innerText += "\n" + "Someone is yelling: Majstore Zadna! you open it.";
+output.innerText += "\n" + `is zadna open?: ${ petka.openDoors(false, true)}`;
+output.innerText += "\n" + "now you close it!";
+output.innerText += "\n" + `is zadna open?: ${petka.closeDoors(false, true)}`;
+output.innerText += "\n" + 'ok. time to go.. press the gas';
+output.innerText += "\n" + petka.gasPedal(true);
