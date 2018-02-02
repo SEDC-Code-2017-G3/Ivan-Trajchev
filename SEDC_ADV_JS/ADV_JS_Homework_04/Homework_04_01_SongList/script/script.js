@@ -1,18 +1,15 @@
 "use strict";
 $(function () {
- 
-    function getData(fn) {
-        $.ajax({
+    async function getData(fn) {
+        return await $.ajax({
             method: "GET",
             url: "http://demo6418849.mockable.io/songs",
-            success: data => fn(songList = data, tBody),
-            error: error => console.log(error)
+            success: data => data,
+            error: error => error
         });
     }
 
-    function reverseList(list) {
-        return (div) => printTable(list.reverse(), div);
-    }
+    var reverseList = list => div => printTable(list.reverse(), div);
 
     function printTable(list, div, sortFn) {
         if (sortFn != null) list = list.sort(sortFn);
@@ -26,6 +23,7 @@ $(function () {
             $("<td>").text(song.duration).appendTo(row);
             div.append(row);
         });
+        return list;
     }
 
     function sortData(list, div, evt) {
@@ -48,9 +46,15 @@ $(function () {
         printTable(list, div, sortFn);
     }
 
-    let songList = [{ rank: "NO DATA!" }];
+    let songList = [{
+        rank: "NO DATA!"
+    }];
     const tBody = $("#tbody");
-    $("#pull").on("click", () => getData(printTable));
+
+    $("#pull").on("click", async () => {
+            return songList = await getData()
+                .then((value) => printTable(value, tBody))
+    });
     $("#sort").on("change", (evt) => sortData(songList, tBody, evt));
     $("[name='minmax']").on("change", () => reverseList(songList)(tBody));
 });
