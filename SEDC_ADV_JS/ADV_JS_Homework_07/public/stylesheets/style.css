@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+.selected {
+  color: darkred;
+}
+#post_result{
+  width: 255px;
+  height: 30px;
+  border: none;
+}
+
+#pages{
+  max-width: 80vw;
+}
+#pages > li {
+  list-style: none;
+  display: inline-block;
+  padding: 5px;
+}

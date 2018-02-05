@@ -1,0 +1,65 @@
+@html.extend('layout', function(model) {
+  
+  @html.block('section-left', function(model) {
+    <section style="width: 45%; display: inline-block; float: left">
+        Hello from the other side!
+        <b>Total:
+            <span id="total"></span>
+        </b>
+        <br/>
+        <button id="author">Sort by author</button>
+        <button id="title">Sort by title</button>
+        <label for="showonpage">Show on page</label>
+        <select name="showonpage" id="showonpage">
+            <option value="10">10</option>
+            <option value="30" selected>30</option>
+            <option value="50">50</option>
+        </select>
+        <table id="books" border="1">
+            <tr>
+                <th>
+                    Author
+                </th>
+                <th>
+                    Book Title
+                </th>
+            </tr>
+        </table>
+        <ul id="pages">
+        </ul>
+    </section>
+  })
+
+  @html.block('section-right', function(model){
+      <section style="width: 45%; display: inline-block">
+        <form action="api/books" method="POST" id="addform" target="post_result">
+            <table id="addbook" border="1">
+                <tr>
+                    <th colspan="2">Add Book</th>
+                </tr>
+                <tr>
+                    <td>Author</td>
+                    <td>
+                        <input type="text" name="author">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Book Title</td>
+                    <td>
+                        <input type="text" name="title">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Add book" style="width: 100%">
+                    </td>
+                </tr>
+            </table>
+            <p id="message">
+
+            </p>
+        </form>
+        <iframe id="post_result" name="post_result"></iframe>
+    </section>
+  })
+})
