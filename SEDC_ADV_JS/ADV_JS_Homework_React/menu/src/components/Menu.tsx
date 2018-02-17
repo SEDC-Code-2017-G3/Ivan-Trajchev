@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MenuInterface } from '../data/menuData';
 import MenuItem from './MenuItem';
 
-class Menu extends React.Component<{ menuData: Array<MenuInterface>, getItems(item: object): void}>{
+class Menu extends React.Component<{ menuData: Array<MenuInterface>, getItems(item: object, currentQty: number): void}>{
     
     items = this.props.menuData.map(
         (item, index) => <MenuItem key={index} item={item} getItems={this.props.getItems}/>
@@ -20,6 +20,7 @@ class Menu extends React.Component<{ menuData: Array<MenuInterface>, getItems(it
                         <tr>
                             <th>Name</th>
                             <th>Price</th>
+                            <th>Qty</th>
                             <th>Order</th>
                         </tr>
                         {this.items}

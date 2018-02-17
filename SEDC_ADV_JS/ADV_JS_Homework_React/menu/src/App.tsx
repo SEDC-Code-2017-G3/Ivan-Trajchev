@@ -5,21 +5,20 @@ import Order from './components/Order';
 import { menuData, MenuInterface } from './data/menuData';
 
 // const logo = require('./logo.svg');
-class App extends React.Component<{}, { items: Array<MenuInterface> , total: number}>{
+class App extends React.Component<{}, { items: Array<MenuInterface>, total: number}>{
     
     state = { items: Array<MenuInterface>(), total: 0};
-    addItem = (item: MenuInterface) => {
+    addItem = (item: MenuInterface, currentQty: number) => {
+        let addPrice;
         let itemsArray = this.state.items;
         let position = itemsArray.map((el: MenuInterface) => el.name).indexOf(item.name);
+        
         if (position === -1) {
-            item.qty++;
             itemsArray.push(item);
         }
-        else {
-            itemsArray[position].qty++;
-        }
-        let addPrice = this.state.total + item.price; 
-        return this.setState({ items: itemsArray, total: addPrice});
+
+        addPrice = this.state.total + item.price * currentQty; 
+        return this.setState({ items: itemsArray,  total: addPrice});
     }
     removeItem = (item: MenuInterface) => {
         let itemsArray = this.state.items;
