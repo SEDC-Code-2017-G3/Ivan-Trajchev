@@ -1,0 +1,7 @@
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\bin\Debug\Homework_02.exe.config
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\bin\Debug\Homework_02.exe
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\bin\Debug\Homework_02.pdb
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\obj\Debug\Homework_02.csproj.CoreCompileInputs.cache
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\obj\Debug\Homework_02.exe
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\obj\Debug\Homework_02.pdb
+c:\users\ivan\source\repos\ConsoleApp1\Homework_02\obj\Debug\Homework_02.csprojResolveAssemblyReference.cache
